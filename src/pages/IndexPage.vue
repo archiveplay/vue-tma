@@ -3,12 +3,14 @@ import { computed } from 'vue';
 import { routes } from '@/router';
 import AppPage from '@/components/AppPage.vue';
 import AppLink from '@/components/AppLink.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 const nonIndexRoutes = computed(() => routes.filter((r) => !!r.meta?.title));
 </script>
 
 <template>
   <AppPage title="Home Page" :back="false">
+    <HelloWorld />
     <p>
       This page is a home page in this boilerplate. You can use the links below to visit other
       pages with their own functionality.
